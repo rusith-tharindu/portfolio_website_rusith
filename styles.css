@@ -1,0 +1,481 @@
+:root {
+    --bg: #0f0f0f;
+    --text: #a5a4a5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Roboto", sans-serif;
+}
+
+.bubbles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 760px;
+    background: url(./bubbles.png) no-repeat 50% 50%;
+    background-size: cover;
+    mix-blend-mode: difference;
+    transform-origin: center;
+}
+
+h1 {
+    font-family: "Righteous", sans-serif;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    margin-left: 10px;
+    line-height: 1.5;
+}
+
+a {
+    font-weight: bolder;
+    text-decoration: none;
+    color: var(--text);
+}
+
+/* logo */
+.logo {
+    position: fixed;
+    margin: 2rem;
+}
+
+.logo a {
+    position: relative;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.logo a:hover {
+    color: gold;
+}
+
+.logo .logo-revealer {
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: var(--bg);
+}
+
+/* contact */
+.contact {
+    position: fixed;
+    right: 0;
+    margin: 2rem;
+}
+
+.contact a {
+    font-weight: bolder;
+    position: relative;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.contact a:hover {
+    color: gold;
+}
+
+.contact .contact-revealer {
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: var(--bg);
+}
+
+/* hero */
+.hero {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.hero > div {
+    display: flex;
+    flex-direction: column;
+    padding: 18rem 5rem 5rem 5rem;
+}
+
+.header {
+    flex: 3;
+}
+
+.copy {
+    flex: 2;
+}
+
+/* header */
+.hero .header .row {
+    position: relative;
+}
+
+.hero .header .row h1 {
+    position: relative;
+}
+
+.hero .header .row .h1-revealer {
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: var(--bg);
+}
+
+/* copy */
+.copy-top .row,
+.copy-bottom .row {
+    position: relative;
+}
+
+.copy-top .row p,
+.copy-bottom .row p {
+    position: relative;
+
+}
+
+.copy-top .row .p-revealer,
+.copy-bottom .row .p-revealer {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: var(--bg);
+
+}
+
+.pre-loader {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    z-index: 2;
+}
+
+.loader-wrapper {
+    position: relative;
+    width: 5px;
+    height: 100px;
+    background: rgb(240, 240, 240, 0.25);
+    overflow: hidden;
+    transform: rotate(40deg);
+}
+
+.loader {
+    position: absolute;
+    top: 0;
+    width: 120%;
+    height: 120%;
+    background: var(--bg);
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    display: inline-block;
+}
+
+h2 {
+    font-size: 50px;
+    font-family: "Righteous", sans-serif;
+    background: #ff6a00;
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.inline-block {
+    max-width: 100%;
+    display: inline-block;
+}
+
+.page-wrapper {
+    z-index: 0;
+    position: relative;
+}
+
+.container {
+    width: 90vw;
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.margin-bottom-medium {
+    margin-bottom: 32px;
+}
+
+.paragraph-large {
+    letter-spacing: -0.02em;
+    font-size: 20px;
+}
+
+.section-timeline-heading {
+    background-color: #0f0f0f;
+}
+
+.padding-vertical-xlarge {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.timeline-main_heading-wrapper {
+    color: #fff;
+    text-align: center;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timeline_component {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    position: relative;
+}
+
+.timeline_item {
+    z-index: 2;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 180px 1fr;
+    grid-auto-columns: 1fr;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: grid;
+    position: relative;
+}
+
+.timeline_left {
+    text-align: right;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+.timeline_centre {
+    justify-content: center;
+    display: flex;
+}
+
+.timeline_date-text {
+    color: #fff;
+    letter-spacing: -0.01em;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 1.4;
+    position: sticky;
+    top: 50vh;
+}
+
+.timeline_date-text p{
+    color: #a5a4a5;
+}
+
+.timeline_text {
+    color: #a5a4a5;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.timeline_circle {
+    background-color: #fff;
+    border-radius: 100%;
+    width: 15px;
+    min-width: 15px;
+    max-width: 15px;
+    height: 15px;
+    min-height: 15px;
+    max-height: 15px;
+    position: sticky;
+    top: 50vh;
+    box-shadow: 0 0 0 8px #0a0a0a;
+}
+
+.timeline_progress {
+    z-index: -2;
+    background-color: #414141;
+    width: 3px;
+    height: 100%;
+    position: absolute;
+}
+
+.timeline_progress-bar {
+    z-index: -1;
+    background: #ff6a00;
+    background: -webkit-linear-gradient(to bottom, #ff6a00, #ee0979);
+    background: linear-gradient(to bottom, #ff6a00, #ee0979);
+    width: 3px;
+    height: 100%; /* Full height of the section */
+    position: absolute;
+    inset: 0 auto 50vh;
+}
+
+.section-timeline {
+    z-index: -3;
+    background-color: #0f0f0f;
+    position: relative;
+    height: 100vh;/*you can Remove if you want to*/
+}
+
+.margin-bottom-xlarge {
+    margin-bottom: 56px;
+}
+
+.timeline_link {
+    opacity: 0.6;
+    color: #fff;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    display: flex;
+}
+
+.timeline_link:hover {
+    opacity: 1;
+}
+
+.link-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.text-colour-lightgrey {
+    color: #ffffffa6;
+}
+
+.overlay-fade-top {
+    background-image: linear-gradient(#0f0f0f, #0f0f0f);
+    height: 80px;
+    position: absolute;
+    inset: 0% 0% auto;
+}
+
+.overlay-fade-bottom {
+    background-image: linear-gradient(to top, #0f0f0f, #0f0f0f);
+    height: 80px;
+    position: absolute;
+    inset: auto 0% 0%;
+}
+
+
+
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    .h1-revealer,
+    .p-revealer,
+    .logo-revealer,
+    .contact-revealer {
+        display: none;
+    }
+
+    .hero > div {
+        padding: 8rem 4rem 2rem 2rem;
+    }
+
+    .h2{
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    .paragraph-large {
+        font-size: 18px;
+    }
+
+    .padding-vertical-xlarge {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .timeline_item {
+        grid-template-columns: 64px 1fr;
+        width: 100%;
+    }
+
+    .timeline_left {
+        text-align: left;
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .timeline_centre {
+        justify-content: flex-start;
+        grid-area: 1 / 1 / 3 / 2;
+    }
+
+    .timeline_right {
+        grid-area: span 1 / span 1 / span 1 / span 1;
+    }
+
+    .timeline_date-text {
+        margin-bottom: 24px;
+        font-size: 36px;
+    }
+
+    .timeline_text {
+        font-size: 20px;
+    }
+
+    .timeline_progress {
+        left: 6px;
+    }
+
+    .margin-bottom-xlarge {
+        margin-bottom: 48px;
+    }
+}
