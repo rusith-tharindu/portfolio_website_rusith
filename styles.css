@@ -448,7 +448,7 @@ a {
 .section-heading {
     font-weight: 800;
     font-size: var(--heading-font-size);
-    margin-bottom: -6vw;
+    margin-bottom: -3%;
 }
 
 /* Main container for each post slider */
